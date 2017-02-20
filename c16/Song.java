@@ -34,6 +34,7 @@ public class Song implements Comparable<Song> {
     }
 
     public String toString() {
+//        return "" + title + ": " + artist ;
         return title;
     }
 }

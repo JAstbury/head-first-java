@@ -11,10 +11,21 @@ public class Jukebox1 {
         new Jukebox1().go();
     }
 
+    class ArtistCompare implements Comparator<Song> {
+        public int compare(Song one, Song two) {
+            return one.getArtist().compareTo(two.getArtist());
+        }
+    }
+
     public void go() {
         getSongs();
         System.out.println(songList);
         Collections.sort(songList);
+        System.out.println(songList);
+
+        ArtistCompare artistCompare = new ArtistCompare();
+        Collections.sort(songList, artistCompare);
+
         System.out.println(songList);
     }
 
